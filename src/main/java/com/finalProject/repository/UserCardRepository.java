@@ -13,7 +13,7 @@ public interface UserCardRepository extends JpaRepository<UserCard, Long> {
 
     long countByUser_UserId(Long userId);
 
-    List<UserCard> findByUser_UserIdAndCard_Rarity(Long userId, String rarity);
+    List<UserCard> findByUser_UserIdAndCard_RarityConfig_Rarity(Long userId, String rarity);
 
     void deleteByUser_UserIdAndCard_CardId(Long userId, Long cardId);
 }
