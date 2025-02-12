@@ -1,6 +1,7 @@
 package com.finalProject.controller;
 
 import com.finalProject.model.User;
+import com.finalProject.service.CardPackService;
 import com.finalProject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    private CardPackService cardPackService;
 
     // 注册用户
     @PostMapping("/register")
@@ -34,5 +36,10 @@ public class UserController {
         } catch (RuntimeException e) {
             return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED); // 返回401状态
         }
+    }
+
+    @PostMapping("/openPack")
+    public String openPack(@RequestParam Long userId, @RequestParam Long packId) {
+        return cardPackService.openPack(userId, packId);
     }
 }

@@ -16,8 +16,5 @@ public class CardPackController {
         return cardPackService.buyPack(userId, packId, quantity);
     }
 
-    @PostMapping("/openPack")
-    public String openPack(@RequestParam Long userId, @RequestParam Long packId) {
-        return cardPackService.openPack(userId, packId);
-    }
+
 }
