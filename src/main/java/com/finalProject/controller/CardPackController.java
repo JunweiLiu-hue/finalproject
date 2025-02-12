@@ -11,8 +11,13 @@ public class CardPackController {
     @Autowired
     private CardPackService cardPackService;
 
-    @PostMapping("/purchase")
-    public String purchasePack(@RequestParam Long userId, @RequestParam Long packId) {
-        return cardPackService.purchasePack(userId, packId);
+    @PostMapping("/buyPack")
+    public String buyPack(@RequestParam Long userId, @RequestParam Long packId, @RequestParam(defaultValue = "1") int quantity) {
+        return cardPackService.buyPack(userId, packId, quantity);
+    }
+
+    @PostMapping("/openPack")
+    public String openPack(@RequestParam Long userId, @RequestParam Long packId) {
+        return cardPackService.openPack(userId, packId);
     }
 }
