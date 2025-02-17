@@ -1,8 +1,11 @@
 package com.finalProject.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "user")
 public class User {
 
     @Id
@@ -19,18 +22,15 @@ public class User {
     @Column(nullable = false)
     private Double balance;
 
-    public Double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(Double balance) {
-        this.balance = balance;
-    }
-
     @Transient
     private String confirmPassword;
 
-    // Getters and Setters
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserActivity> userActivities = new ArrayList<>();
+
+    public User() {
+    }
+
     public Long getUserId() {
         return userId;
     }
@@ -55,11 +55,27 @@ public class User {
         this.password = password;
     }
 
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
     public String getConfirmPassword() {
         return confirmPassword;
     }
 
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
+    }
+
+    public List<UserActivity> getUserActivities() {
+        return userActivities;
+    }
+
+    public void setUserActivities(List<UserActivity> userActivities) {
+        this.userActivities = userActivities;
     }
 }
