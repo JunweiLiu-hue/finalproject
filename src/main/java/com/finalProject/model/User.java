@@ -25,9 +25,6 @@ public class User {
     @Transient
     private String confirmPassword;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserActivity> userActivities = new ArrayList<>();
-
     public User() {
     }
 
@@ -71,11 +68,4 @@ public class User {
         this.confirmPassword = confirmPassword;
     }
 
-    public List<UserActivity> getUserActivities() {
-        return userActivities;
-    }
-
-    public void setUserActivities(List<UserActivity> userActivities) {
-        this.userActivities = userActivities;
-    }
 }

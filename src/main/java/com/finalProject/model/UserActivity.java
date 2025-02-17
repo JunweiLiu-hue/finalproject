@@ -18,10 +18,7 @@ public class UserActivity {
     @JoinColumn(name = "activity_id", nullable = false)
     private Activity activity;
 
-    private String status;
-
-    public UserActivity() {
-    }
+    private String status; // "IN_PROGRESS", "COMPLETED" 等
 
     public Long getId() {
         return id;
