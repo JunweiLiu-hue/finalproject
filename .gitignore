@@ -1,0 +1,18 @@
+# Ignore IDEA and VSCode settings
+.idea/
+.vscode/
+
+# Ignore Java build outputs
+*.class
+*.jar
+*.war
+*.ear
+backend/target/
+
+# Ignore Node.js build outputs
+frontend/node_modules/
+frontend/build/
+
+# Ignore environment files
+.env
+.env.*

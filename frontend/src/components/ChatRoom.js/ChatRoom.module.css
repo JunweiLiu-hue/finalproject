@@ -1,0 +1,27 @@
+.chatRoomContainer {
+  background: #fff8e7;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #5c3b11;
+  margin-bottom: 15px;
+}
+
+.switchButton {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #d9a874;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

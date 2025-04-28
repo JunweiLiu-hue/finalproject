@@ -1,0 +1,121 @@
+/* 卡片列表整体样式 */
+.container {
+    background-color: #faf3dc;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    overflow-y: auto; /* ✅ 启用滚动条 */
+}
+
+/* 标题样式 */
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4a3314;
+    margin-bottom: 20px;
+}
+
+/* 卡片网格布局 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* ✅ 自适应宽度 */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 错误信息 */
+.error {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 没有卡片时的提示 */
+.noCards {
+    font-size: 1.2rem;
+    color: #4a3314;
+    margin-top: 20px;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: #d9a874;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* ✅ 鼠标悬停时变为可点击 */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 悬停放大效果 */
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* 卡片内的图片 */
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* 详情页大图 */
+.imageLarge {
+    width: 60%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* 卡片名称 */
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a3314;
+    margin-top: 10px;
+}
+
+/* 详情页传记样式 */
+.biography {
+    font-size: 1rem;
+    color: #4a3314;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 返回按钮 */
+.backButton {
+    background-color: #5c3b11;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.backButton:hover {
+    background-color: #3d2709;
+}
+
+/* 让卡牌展示稀有度 */
+.rarity {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* 根据不同稀有度给出不同颜色 */
+.rarity-Common { color: gray !important; }
+.rarity-Rare { color: blue !important; }
+.rarity-Historical { color: green !important; }
+.rarity-Legendary { color: gold !important; font-weight: bold; }

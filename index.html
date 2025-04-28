@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETU Final Year Project</title>
+    <style>
+        /* General Body Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffe4b5, #ffccbc);
+            color: #333;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Title Styles */
+        .landing-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Image Styles */
+        .landing-image-centered {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 20px;
+        }
+
+        /* Name Styles */
+        .landing-name {
+            font-size: 2em;
+            margin: 10px 0 20px 0;
+            font-weight: bold;
+        }
+
+        /* Description Styles */
+        .landing-description {
+            width: 60%;
+            max-width: 900px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 20px auto;
+            text-align: justify;
+        }
+
+        /* Links Styles */
+        .landing-links {
+            margin-top: 20px;
+            font-size: 1.2em;
+            line-height: 2;
+        }
+
+        .landing-link {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .landing-link:hover {
+            color: #ff4757;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .landing-title {
+                font-size: 2.5em;
+            }
+
+            .landing-name {
+                font-size: 1.6em;
+            }
+
+            .landing-description {
+                width: 80%;
+                font-size: 1em;
+            }
+
+            .landing-links {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <h1 class="landing-title">SETU Final Year Project</h1>
+        <img src="picture.jpg" alt="Profile" class="landing-image-centered">
+        <h2 class="landing-name">Junwei Liu</h2>
+        <p class="landing-description">
+            <strong>Project Overview</strong>
+        </p>
+        <p class="landing-description">
+            The Three Kingdoms Card Shop Simulator is a digital card game inspired by the Three Kingdoms period in China.
+            Built with React.js, Spring Boot, and MySQL, it allows users to register, buy card packs, collect character cards, and
+            trade them using virtual currency. A probability-based system enhances the excitement of collecting rare cards. Users can manage
+            collections, trade cards, and browse a virtual marketplace, while administrators oversee user accounts and inventory. The system
+            follows an MVC architecture and Agile methodology to ensure an engaging gaming experience.
+        </p>
+        <p><strong>Video Demo:</strong> <a href="https://youtu.be/3ISvSYh8XJI" class="landing-link">https://youtu.be/3ISvSYh8XJI</a></p>
+        <p><strong>GitHub Link:</strong> <a href="https://github.com/JunweiLiu-hue/FYP.git" class="landing-link">https://github.com/JunweiLiu-hue/FYP.git</a></p>
+    </div>
+</body>
+</html>
